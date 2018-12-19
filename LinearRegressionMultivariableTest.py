@@ -10,6 +10,8 @@ y2 = np.array([[2], [4], [7], [6], [9], [11]], dtype=float)
 LRM3D = lrm.LinearRegressionMultivariable(0.05355, 3)
 LRM3D.run(70000, x3, y3)
 
+print(LRM3D.predict(np.array([1, 3, 5])))
+
 LRM2D = lrm.LinearRegressionMultivariable(0.01, 2)
 LRM2D.run(10000, x2, y2)
 

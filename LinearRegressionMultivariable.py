@@ -44,6 +44,9 @@ class LinearRegressionMultivariable:
         else:
             pass
 
+    def predict(self, x):
+        return sum(self.hypothesis(x))
+
     def resFunction(self, x1, x2):
         return self.thetas[0][0] + self.thetas[1][0] * x1 + self.thetas[2][0] * x2
 
@@ -63,7 +66,6 @@ class LinearRegressionMultivariable:
         ax = Axes3D(fig)
         ax.scatter(X1, Y1, Z1, color='red')
         ax.plot_surface(X, Y, Z, alpha=0.5, color='grey')
-        ax.legend()
         plt.show()
 
     def display2D(self, x, y):
